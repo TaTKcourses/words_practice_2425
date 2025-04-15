@@ -24,3 +24,4 @@ for nev, szo in parok:
 
 #szótárba helyezés
 parok_szotar = {nev: szo for nev, szo in parok}
+print(parok_szotar)
