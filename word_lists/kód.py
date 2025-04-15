@@ -21,3 +21,6 @@ for nev in proper_nouns:
 
 for nev, szo in parok:
     print(f"{nev} <- {szo}\n")
+
+#szótárba helyezés
+parok_szotar = {nev: szo for nev, szo in parok}
