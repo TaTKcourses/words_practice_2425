@@ -1,0 +1,20 @@
+# Stopszavak beolvasása
+f1 = open('stopwords_hu.txt', 'r', encoding='utf-8')
+stopwords = f1.read().split()
+f1.close()
+
+# Szöveg beolvasása
+f2 = open('top_freq_5000_hu.txt', 'r', encoding='utf-8')
+text = f2.read().split()
+f2.close()
+
+# Hiányzó stopszavak keresése
+missing = []
+for word in stopwords:
+    if word not in text:
+        missing.append(word)
+
+print("Stopszavak, amik nincsenek az 5000 leggyakoribb szavak listájában:")
+for word in sorted(missing):
+    print(word)
+
