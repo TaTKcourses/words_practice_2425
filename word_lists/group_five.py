@@ -8,7 +8,7 @@ def contains_reversed(file_path: str, encoding='UTF-8'):
     container = []
     for word in contents_list:
         if len(word) > 1:
-            if word[::-1] in contents_list:
+            if word[::-1] in contents_list and word not in container:
                 container.append(word)
 
     return container
